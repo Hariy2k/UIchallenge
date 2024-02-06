@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100&family=Roboto:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+main {
+    overflow-x: hidden;
+}
+
+:root {
+    --primary: #EF8094;
+    --secondary: #F5F8FF;
+    --numberText: #E55a5a;
+}
+
+#imgBar {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#imgBar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    background: white;
+}
+
+.navbar-brand>img {
+    width: 13rem;
+}
+
+header .navbar {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.nav-item {
+    padding: 0.5em;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.nav-item>.nav-link {
+    font-family: 'Exo';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.16em;
+    color: black;
+    padding: 0px;
+}
+
+.offcanvas-end {
+    width: 100% !important;
+}
+
+.btn-primary {
+    border: 4px solid var(--primary);
+    background: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Exo';
+    letter-spacing: 0.12em;
+    color: black;
+    font-size: 15px;
+}
+
+.btn:active,
+.btn:hover {
+    color: white;
+    background-color: var(--primary) !important;
+    border-color: #D26075 !important;
+}
+
+.my-container {
+    position: relative;
+    padding: 2.5rem 4rem 0rem 3rem;
+    background-color: var(--secondary) !important;
+}
+
+.section {
+    padding: 2.5rem 1rem 2.5rem 1rem !important;
+}
+
+
+.text-section {
+    padding-block: 3rem;
+    padding-inline: 5rem;
+    text-wrap: pretty;
+}
+
+.text-section>h1 {
+    color: var(--numberText);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'DM Sans';
+    font-weight: 600;
+}
+
+.text-section>p {
+    color: black;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Roboto';
+}
+
+.image-section {
+    position: relative;
+}
+
+.box-image {
+    width: 70em;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    right: 15rem;
+}
+
+.box-art-image {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    left: 30rem;
+}
+
+/* Section 1 & 3*/
+.image-container {
+    position: relative;
+}
+
+.img-fluid {
+    max-width: 85%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.float-right {
+    float: right;
+}
+
+.number1-overlay {
+    position: absolute;
+    bottom: 12rem;
+    left: 12rem;
+    font-size: 18rem;
+    font-weight: 400;
+    color: var(--numberText);
+    opacity: 0.85;
+    z-index: 2;
+}
+
+.number3-overlay {
+    position: absolute;
+    bottom: 16rem;
+    left: 10rem;
+    font-size: 18rem;
+    font-weight: 400;
+    color: var(--numberText);
+    opacity: 0.85;
+    z-index: 2;
+}
+
+/* Section 2 code  */
+
+.image-container1 {
+    position: relative;
+}
+
+.number2-overlay {
+    position: relative;
+    left: 5rem;
+    top: 8rem;
+    font-size: 15rem;
+    font-weight: 400;
+    color: var(--numberText);
+    opacity: 0.85;
+    z-index: 3;
+}
+
+.box-image1 {
+    width: 85%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    right: 0rem;
+    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.5);
+}
+
+.box-art-image1 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    bottom: 10rem;
+    z-index: 1;
+    right: 0rem;
+}
+
+/* Ensures the image and number are aligned properly on all screen sizes */
+
+@media screen and (max-width: 426px) {
+    #imgBarImage {
+        content: url(../src/assets/topbar-mobile.png);
+    }
+
+    header .navbar {
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+
+    .navbar-brand>img {
+        width: 8rem;
+    }
+
+    .nav-item {
+        padding: 1.3rem;
+    }
+
+    .my-container {
+        padding: 2.5rem 2rem 0rem 1rem;
+    }
+
+    .text-section {
+        padding-block: 1rem;
+        padding-inline: 2.2rem;
+    }
+
+    .box-image {
+        width: 50em;
+        right: 10rem;
+    }
+
+    .box-art-image {
+        width: 65%;
+        top: 30%;
+        left: 20rem;
+    }
+
+    .number1-overlay {
+        bottom: 5rem;
+        left: 8rem;
+        font-size: 14rem;
+    }
+
+    .number2-overlay {
+        transform: translate(-85%, -10%);
+    }
+
+    .number3-overlay {
+        bottom: 10rem;
+        left: 3rem;
+        font-size: 14rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #imgBarImage {
+        content: url(../src/assets/topbar-tablet.png);
+    }
+
+    header .navbar {
+        padding-left: 2.8rem;
+        padding-right: 2.8rem;
+    }
+
+    .navbar-brand>img {
+        width: 9rem;
+    }
+
+    .text-section {
+        padding-block: 1rem;
+        padding-inline: 0.5rem;
+    }
+
+    .text-section>p {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .box-image {
+        width: 60em;
+        right: 12rem;
+    }
+
+    .box-art-image {
+        width: 60%;
+        top: 32%;
+        left: 25rem;
+    }
+
+    .box-art-image1 {
+        width: 60%;
+        bottom: 6rem;
+    }
+
+    .number1-overlay {
+        bottom: 3rem;
+        left: 6rem;
+        font-size: 14rem;
+    }
+
+    .number2-overlay {
+        left: 5rem;
+        top: 8rem;
+        font-size: 14rem;
+    }
+
+    .number3-overlay {
+        bottom: 8rem;
+        left: 4rem;
+        font-size: 14rem;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #imgBarImage {
+        content: url(../src/assets/topbar-desktop.png);
+    }
+
+    header .navbar {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .float-right {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-section {
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+
+    .box-image {
+        width: 60em;
+        right: 15rem;
+    }
+
+    .box-art-image {
+        width: 50%;
+        top: 38%;
+        left: 23rem;
+    }
+
+    .number1-overlay {
+        bottom: 6rem;
+        left: 6rem;
+        font-size: 15rem;
+    }
+
+    .number2-overlay {
+        left: 5rem;
+        top: 8rem;
+        font-size: 15rem;
+    }
+
+    .number3-overlay {
+        bottom: 12rem;
+        left: 6rem;
+        font-size: 15rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    header .navbar {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+    }
+
+    .nav-item {
+        margin-inline: 1.4rem;
+    }
+}
